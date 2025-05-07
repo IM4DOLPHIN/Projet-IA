@@ -23,17 +23,31 @@ Ce dépôt contient un **notebook Colab** et un **script Python** pour mettre en
 - Un compte **Google** pour exécuter le notebook sur **Google Colab**
 
 ## 🚀 Comment démarrer
-1. **Ouvrir le notebook**  
-   - Cliquez sur « Open in Colab » ou importez `brain_tumor_detection.ipynb` dans votre Drive.  
-2. **Importer votre `kaggle.json`**  
-   - Dans Colab, glissez-déposez `kaggle.json` via l’onglet **Files** (sans dossier intermédiaire).  
-3. **Configurer et télécharger le dataset**  
-   - Exécutez la cellule qui installe Kaggle, copie `kaggle.json` dans `~/.kaggle/` et lance le téléchargement/décompression du dataset.  
-4. **Exécuter les cellules** dans l’ordre :  
-   - **1. Analyse descriptive** (chargement, aperçu, distribution)  
-   - **2. Modélisation** (préparation train/test, CNN, entraînement, évaluation)  
-   - **3. Pipeline end-to-end** (sauvegarde, rechargement, prédiction)  
-   - **4. Storyline / démo** (appel de `predict_and_show`, captures d’écran, conclusions)
+
+1. **Ouvrir le notebook**
+   Cliquez sur « Open in Colab » ou importez `projet_IRM.ipynb` dans votre Google Drive.
+
+2. **Télécharger votre clé Kaggle (kaggle.json)**
+   Rendez-vous sur [https://www.kaggle.com](https://www.kaggle.com), connectez-vous à votre compte, puis allez dans :
+   **"My Account" → "Create New API Token"**
+   Cela télécharge un fichier `kaggle.json`. Gardez-le précieusement.
+
+3. **Importer votre `kaggle.json` dans Colab**
+   Dans l'onglet latéral « Files » de Colab, glissez-déposez le fichier `kaggle.json` directement dans `/content` (sans sous-dossier).
+
+4. **Configurer et télécharger le dataset**
+   Exécutez les cellules qui :
+
+   * installent la CLI Kaggle
+   * copient `kaggle.json` dans le répertoire `~/.kaggle`
+   * téléchargent et décompressent automatiquement le dataset depuis Kaggle.
+
+5. **Exécuter les cellules du notebook dans l’ordre** :
+
+   * 📊 **Analyse descriptive** : chargement, exploration visuelle, distribution des classes
+   * 🤖 **Modélisation** : préparation train/test, définition du CNN, entraînement, courbes d'apprentissage
+   * 💾 **Pipeline end-to-end** : sauvegarde, rechargement du modèle, prédictions sur de nouvelles images
+   * 🎬 **Storyline / Démo** : test de `predict_and_show`, conclusion, démonstration visuelle
 
 ## 🎯 Résultat attendu
 - Précision finale sur l’ensemble de test d’environ **75–80 %**.  
